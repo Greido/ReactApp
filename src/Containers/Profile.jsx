@@ -3,25 +3,26 @@ import React from 'react'
 
 function Profile(props) {
 
-    const {user,pic} = props
+    const {user , pic} = props
+    
     console.log(pic)
     return (
         <>
             <Typography variant='h2' textAlign={'center'} sx={{p:4,fontWeight:600}}>My Profile</Typography>
             
-            <Box sx={{ background: 'ligth', width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center',borderRadius:200}} >
+            <Box sx={{ background: 'ligth', width: '100%', height: '100vh', display: 'flex', justifyContent: 'center',borderRadius:200}} >
 
                 
 
-                <Paper elevation={24} sx={{ width: 2000,height:800,marginTop:10 }}>                    
+                <Paper elevation={24} sx={{ width: '50%',height:800,marginTop:10 }}>                    
                     
-                    <Box sx={{display:'flex',marginTop:2,width:'100',justifyContent:'space-between',alignItems:'center',flexDirection:'column',alignContent:'center'}}>
+                    <Box sx={{display:'flex',flexWrap:'wrap',marginTop:2,justifyContent:'space-between',alignItems:'center',flexDirection:'column',alignContent:'center'}}>
                         
 
                         {user?(
                             <>
                             <Avatar sx={{width:200,height:200}}
-                            src={pic.url}
+                            src={pic.thumbnailUrl}
                             >
 
                             </Avatar>
