@@ -10,13 +10,13 @@ function Profile(props) {
         <>
             <Typography variant='h2' textAlign={'center'} sx={{p:4,fontWeight:600}}>My Profile</Typography>
             
-            <Box sx={{ background: 'ligth', width: '100%', height: '100vh', display: 'flex', justifyContent: 'center',borderRadius:200}} >
+            <Box sx={{ background: 'ligth', width: '100%', height: '50%', display: 'flex', justifyContent: 'center',borderRadius:200}} >
 
                 
 
                 <Paper elevation={24} sx={{ width: '50%',height:800,marginTop:10 }}>                    
                     
-                    <Box sx={{display:'flex',flexWrap:'wrap',marginTop:2,justifyContent:'space-between',alignItems:'center',flexDirection:'column',alignContent:'center'}}>
+                    <Box sx={{display:'flex',flexWrap:'wrap',marginTop:2,justifyContent:'space-between',alignItems:'center',flexDirection:'column',alignContent:'center',height:'auto'}}>
                         
 
                         {user?(
