@@ -29,20 +29,7 @@ function Home() {
                 </Grid>
             </Box>
         </Container>
-        <Container maxWidth="lg">
-            <Box sx={{ mt: 4 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} sm={12} md={12}>
-                         {/* Contenido del primer box */}
-                        <Box sx={{ p: 2, bgcolor: '', color: 'white' }}>
-                            <Paper elevation={4} sx={{padding:3,borderRadius:8}}>
-                                <Todo/>
-                            </Paper>
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Box>
-        </Container>
+
         </>
     )   
 }

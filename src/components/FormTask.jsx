@@ -14,16 +14,20 @@ function FormTask() {
 
     function handleSubmit (event){
         event.preventDefault()
-        console.log(task)
-        const nuevaTarea = {
+        if (task==='') {
+            return alert('complete the form')
+        }else{
+            const nuevaTarea = {
             id : Date.now(),
             tarea :task,
             completado: false
         }
-    
+        
         const temp = [nuevaTarea,...taskList]
         setTaskList(temp)
         setTask('')
+        }
+
     }
 
 return (
@@ -53,7 +57,9 @@ return (
 
             </form>
         </FormGroup>
-        <Todo handleSubmit={handleSubmit} taskList={taskList}/>
+
+        {/* Componente To Do */}
+        <Todo handleSubmit={handleSubmit} taskList={taskList} /> 
     </>
     )
 }
