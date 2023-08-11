@@ -2,12 +2,19 @@ import React from 'react'
 import { Divider, Typography,List, ListItem, ListItemText, Box, Paper } from '@mui/material'
 import {DeleteForeverIcon} from '@mui/icons-material/DeleteForever';
 import IconButton from '@mui/material/IconButton';
-function Todo(props) {
 
 
-    const {task,taskList} = props
+//Implementacion de memoria global de redux
+
+import {useSelector } from 'react-redux/es/hooks/useSelector';
 
 
+function Todo() {
+
+
+    /* const {task,taskList} = props */
+
+    const task = useSelector((state)=>state.task)
     
     
     return (
@@ -17,22 +24,18 @@ function Todo(props) {
             Your tasks
         </Typography>
         
-        <List sx={{width:'100%',maxWidth:360,margin:'0 auto'}}>
-            {taskList.map(task=>(
-                <ListItem
-                key={task.id}
-                disableGutters 
-                >   
+        <List sx={{width:'100%',maxWidth:360,margin:'0 auto'}}>  
+                <ListItem>
                     <Box sx={{width:'100%'}}>
                         <Paper elevation={10} sx={{padding:2,borderRadius:50,width:'100%'}}>
                             <Typography sx={{textAlign:'center'}}>
-                                {task.tarea}
+                                
                             </Typography>
                         </Paper>
                     </Box>
                 </ListItem>
                 
-            ))}
+            
         </List>
         
 

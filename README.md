@@ -1,8 +1,5 @@
-# React + Vite
+# My first React App
 
-This is a lil proyect for "Polo"
+This is a lil proyect for "Polo Tecnologico from La Rioja Argentina"
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a react app using Vite, material UI and Redux

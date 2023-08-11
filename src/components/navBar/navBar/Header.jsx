@@ -17,7 +17,7 @@ function Header() {
         <>
 
             <AppBar position='static'sx={{background:"#984063"}}>
-                <Toolbar >
+                <Toolbar>
 
                     <IconButton
                     color='inherit'
