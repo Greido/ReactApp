@@ -20,7 +20,7 @@ function HeaderDrawer() {
                 <nav>
                     <List> 
                     {/* Inicio */}
-                    <Link to={'/'}>
+                    <Link to={'/'} >
                             <ListItem>
                                 <ListItemButton>
                                     <ListItemIcon>

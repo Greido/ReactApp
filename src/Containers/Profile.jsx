@@ -21,9 +21,7 @@ function Profile(props) {
 
                         {user?(
                             <>
-                            <Avatar sx={{width:200,height:200}}
-                            src={pic.thumbnailUrl}
-                            >
+                            <Avatar sx={{width:200,height:200}}>
 
                             </Avatar>
                             <Typography variant="text" sx={{ fontSize: '1.5rem',width:'40%',marginRight:'auto,auto',marginTop:2,marginBottom:4 }}> 
