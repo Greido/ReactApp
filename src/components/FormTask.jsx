@@ -2,28 +2,29 @@ import React from 'react'
 import { Container,Box,Grid,Paper, Typography, FormGroup,TextField,Button,FormControl } from '@mui/material'
 import { useState } from 'react'
 import Todo from '../Containers/Todo'
+import { useDispatch } from 'react-redux'
+import { addTask } from '../store/actions/taskActions'
 
 
 
 function FormTask() {
 
-    const [task,setTask]=useState("")
-    
-    const [taskList,setTaskList]=useState([])
+    const [task,setTask]=useState('')
 
+    const dispatch = useDispatch()
 
-    function handleSubmit (event){
-        event.preventDefault()
-        console.log(task)
+    function handleSubmit(event){
+        event.preventDefault();
+
         const nuevaTarea = {
-            id : Date.now(),
-            tarea :task,
-            completado: false
+            id:Date.now(),
+            tarea:task,
+            completado:false   
+
         }
-    
-        const temp = [nuevaTarea,...taskList]
-        setTaskList(temp)
-        setTask('')
+
+        dispatch(addTask(nuevaTarea))
+        setTask('');
     }
 
 return (
@@ -39,7 +40,7 @@ return (
                 label="Task" variant="outlined" 
                 type='text'
                 value={task}
-                onChange={event=>setTask(event.target.value)} 
+                onChange={(e)=>setTask(e.target.value)}
                 sx={{width:'100%',textAlign:'center',margin:'0 auto'}} />
 
 
@@ -53,7 +54,7 @@ return (
 
             </form>
         </FormGroup>
-        <Todo handleSubmit={handleSubmit} taskList={taskList}/>
+
     </>
     )
 }

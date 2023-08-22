@@ -35,7 +35,7 @@ function Home() {
                     <Grid item xs={12} sm={12} md={12}>
                          {/* Contenido del primer box */}
                         <Box sx={{ p: 2, bgcolor: '', color: 'white' }}>
-                            <Paper elevation={4} sx={{padding:3,borderRadius:8}}>
+                            <Paper elevation={4} sx={{padding:3,borderRadius:8,display:'flex',flexDirection:'column',alignItems:'center'}}>
                                 <Todo/>
                             </Paper>
                         </Box>
