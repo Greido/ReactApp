@@ -4,17 +4,25 @@ import {DeleteForeverIcon} from '@mui/icons-material/DeleteForever';
 import IconButton from '@mui/material/IconButton';
 
 
-//Implementacion de memoria global de redux
 
-import {useSelector } from 'react-redux/es/hooks/useSelector';
+
+
+
+//Implementacion de memoria global de redux
+//Use dispatch es para hacer algo
+//Use selector es para traer o seleccionar algo desde el estado
+
+import { useSelector } from 'react-redux';
+
 
 
 function Todo() {
 
+    
+    const taskState = useSelector((state) => state.task)
 
-    /* const {task,taskList} = props */
-
-    const task = useSelector((state)=>state.task)
+    console.log(taskState)
+    
     
     
     return (

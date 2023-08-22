@@ -26,7 +26,9 @@ function Header() {
                     >
                         <MenuIcon/>
                     </IconButton>
-                    <Typography variant='h6'sx={{flexGrow:1}}>Menu</Typography>
+                    <Typography variant='h6'sx={{flexGrow:1}}>=
+                        
+                    </Typography>
                     <Typography variant='h6'>PilarTecno</Typography>
 
                 </Toolbar>

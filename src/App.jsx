@@ -9,24 +9,12 @@ import  Home  from './Containers/Home.jsx'
 import Layout from './Containers/Layout.jsx'
 
 
-
-//Redux
-import { Provider, useDispatch } from 'react-redux'
-import { store } from './store/index.js'
-
-
-//Actions of Redux
-
-import {addTask} from './store/taskSlice.js'
-
-
 function App() {
-  
 
   return (
 
     <>
-      <Provider store={store}>
+      
         <BrowserRouter>
           <Layout>
             <Routes>
@@ -35,7 +23,7 @@ function App() {
             </Routes>
           </Layout>
         </BrowserRouter>
-      </Provider>  
+      
     </>
     
   )
