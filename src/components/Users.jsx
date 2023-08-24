@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import Profile from '../Containers/Profile'
-import { createClient } from 'pexels'
+
 
 function Users() {
 

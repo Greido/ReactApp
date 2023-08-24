@@ -7,6 +7,7 @@ import Users from './components/Users.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import  Home  from './Containers/Home.jsx'
 import Layout from './Containers/Layout.jsx'
+import Pokedex from './Containers/Pokedex.jsx'
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Layout>
             <Routes>
               <Route path='/'element={<Home/>}></Route>
-              <Route path='/profile' element={<Users/>}></Route>  
+              <Route path='/profile' element={<Users/>}></Route> 
+              <Route path='/pokedex' element={<Pokedex/>}></Route> 
             </Routes>
           </Layout>
         </BrowserRouter>

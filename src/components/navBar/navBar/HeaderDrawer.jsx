@@ -1,5 +1,14 @@
-import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText,Menu,MenuItem } from '@mui/material'
 import React from 'react'
+import { Box,
+    Divider,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText,
+    Menu,
+    MenuItem,
+    } from '@mui/material'
 import DashboardIcon from '@mui/icons-material/Dashboard'
 import Perfil from '@mui/icons-material/Person'
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -8,9 +17,13 @@ import { useState } from 'react';
 
 import { Link } from 'react-router-dom'
 import { Home } from '@mui/icons-material';
+
+
 function HeaderDrawer() {
     
-    function HeaderDrawer() {
+    
+
+
         const [open, setOpen] = useState(false);
         const [menuAnchor, setMenuAnchor] = useState(null);
 
@@ -61,7 +74,7 @@ function HeaderDrawer() {
                         {/* Dashboard */}
 
                         <ListItem>
-                            <ListItemButton onClick={()=>{setOpen(true)}} >
+                            <ListItemButton onClick={handleMenuOpen} >
                                 <ListItemIcon>
                                     <DashboardIcon/>
                                 </ListItemIcon>
@@ -69,13 +82,12 @@ function HeaderDrawer() {
                                 </ListItemText>
                             </ListItemButton>
                         </ListItem>
-                        <Menu
-                        anchorEl={menuAnchor}
-                        open={Boolean(menuAnchor)}
-                        onClose={handleMenuClose}
-                        >
-                            <MenuItem>Pokedex</MenuItem>
-                            <MenuItem>Rick & Morty</MenuItem>
+                        <Menu anchorEl={menuAnchor} open={Boolean(menuAnchor)} onClose={handleMenuClose}>
+                            <Link to={'/pokedex'}>
+                                <MenuItem onClick={handleMenuClose}>Pokedex</MenuItem>
+                            </Link>
+                            
+                            <MenuItem onClick={handleMenuClose}>Rick & Morty</MenuItem>
                         </Menu>
                     </List>
                 </nav>
@@ -107,5 +119,5 @@ function HeaderDrawer() {
         </>
     )
 }
-}
+
 export default HeaderDrawer
