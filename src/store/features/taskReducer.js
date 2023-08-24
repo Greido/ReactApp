@@ -19,5 +19,5 @@ const taskReducer = (state = initialState,action)=>{
             return state;
     }    
 }
-//conflicto interno borrar esta linea
+
 export default taskReducer

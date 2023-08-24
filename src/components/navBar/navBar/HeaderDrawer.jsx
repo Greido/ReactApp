@@ -1,4 +1,4 @@
-import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { Box, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText,Menu,MenuItem } from '@mui/material'
 import React from 'react'
 import DashboardIcon from '@mui/icons-material/Dashboard'
 import Perfil from '@mui/icons-material/Person'
@@ -10,7 +10,21 @@ import { Link } from 'react-router-dom'
 import { Home } from '@mui/icons-material';
 function HeaderDrawer() {
     
-    const [open,setOpen]=useState(false)
+    function HeaderDrawer() {
+        const [open, setOpen] = useState(false);
+        const [menuAnchor, setMenuAnchor] = useState(null);
+
+        const handleMenuOpen = (event) => {
+            setMenuAnchor(event.currentTarget);
+        };
+
+        const handleMenuClose = () => {
+            setMenuAnchor(null);
+        };
+    
+    
+    
+    /* const [open,setOpen]=useState(false) */
     
 
 
@@ -55,6 +69,14 @@ function HeaderDrawer() {
                                 </ListItemText>
                             </ListItemButton>
                         </ListItem>
+                        <Menu
+                        anchorEl={menuAnchor}
+                        open={Boolean(menuAnchor)}
+                        onClose={handleMenuClose}
+                        >
+                            <MenuItem>Pokedex</MenuItem>
+                            <MenuItem>Rick & Morty</MenuItem>
+                        </Menu>
                     </List>
                 </nav>
                 <Divider/>
@@ -85,5 +107,5 @@ function HeaderDrawer() {
         </>
     )
 }
-
+}
 export default HeaderDrawer

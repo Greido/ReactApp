@@ -16,7 +16,7 @@ function FormTask() {
     function handleSubmit(event){
         event.preventDefault();
 
-<<<<<<< HEAD
+
         const nuevaTarea = {
             id:Date.now(),
             tarea:task,
@@ -26,24 +26,6 @@ function FormTask() {
 
         dispatch(addTask(nuevaTarea))
         setTask('');
-=======
-    function handleSubmit (event){
-        event.preventDefault()
-        if (task==='') {
-            return alert('complete the form')
-        }else{
-            const nuevaTarea = {
-            id : Date.now(),
-            tarea :task,
-            completado: false
-        }
-        
-        const temp = [nuevaTarea,...taskList]
-        setTaskList(temp)
-        setTask('')
-        }
-
->>>>>>> tests
     }
 
 return (
@@ -74,11 +56,6 @@ return (
             </form>
         </FormGroup>
 
-<<<<<<< HEAD
-=======
-        {/* Componente To Do */}
-        <Todo handleSubmit={handleSubmit} taskList={taskList} /> 
->>>>>>> tests
     </>
     )
 }

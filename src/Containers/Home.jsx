@@ -29,7 +29,6 @@ function Home() {
                 </Grid>
             </Box>
         </Container>
-<<<<<<< HEAD
         <Container maxWidth="lg">
             <Box sx={{ mt: 4 }}>
                 <Grid container spacing={2}>
@@ -44,9 +43,6 @@ function Home() {
                 </Grid>
             </Box>
         </Container>
-=======
-
->>>>>>> tests
         </>
     )   
 }
