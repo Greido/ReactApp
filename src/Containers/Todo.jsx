@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 function Todo({taskList}) {
 
-    const tasks = useSelector((state)=>state.taskList)
+    const tasks = useSelector((state)=>state.tasks.taskList)
     
     
     useEffect(()=>{

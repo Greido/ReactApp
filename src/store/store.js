@@ -5,8 +5,8 @@ import taskReducer from "./features/taskReducer";
 import pokeReducer from "./features/pokeReducer"
 const store = configureStore({
     reducer: {
-        taskReducer,
-        pokeReducer
+        tasks:taskReducer,
+        pokemons:pokeReducer
         
     }
 })
