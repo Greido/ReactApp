@@ -87,7 +87,11 @@ function HeaderDrawer() {
                                 <MenuItem onClick={handleMenuClose}>Pokedex</MenuItem>
                             </Link>
                             
-                            <MenuItem onClick={handleMenuClose}>Rick & Morty</MenuItem>
+                            <Link to={'/myApi'}>
+                                <MenuItem onClick={handleMenuClose}>My first Api</MenuItem>
+                            </Link>
+                            
+
                         </Menu>
                     </List>
                 </nav>

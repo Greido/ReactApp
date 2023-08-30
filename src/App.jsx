@@ -10,6 +10,9 @@ import Layout from './Containers/Layout.jsx'
 import Pokedex from './Containers/Pokedex.jsx'
 
 
+/* MI propia api */
+import Myapi from './Containers/myApi.jsx'
+
 function App() {
 
   return (
@@ -19,9 +22,10 @@ function App() {
         <BrowserRouter>
           <Layout>
             <Routes>
-              <Route path='/'element={<Home/>}></Route>
+              <Route path='/' element={<Home/>}></Route>
               <Route path='/profile' element={<Users/>}></Route> 
               <Route path='/pokedex' element={<Pokedex/>}></Route> 
+              <Route path='/Myapi' element={<Myapi/>}></Route>
             </Routes>
           </Layout>
         </BrowserRouter>
