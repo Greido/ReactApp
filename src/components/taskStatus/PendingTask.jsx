@@ -7,6 +7,7 @@ import  updateStatus  from '../../store/features/taskReducer';
 function PendingTask() {
 
     const dispatch = useDispatch();
+
     const inProgressTasks = useSelector((state)=>state.tasks.taskList.filter((task)=>task.completado===1));
 
     useEffect(()=>{
@@ -29,11 +30,11 @@ function PendingTask() {
 
 
         {inProgressTasks.map((task) => (
-                <Paper elevation={6} key={task.id}>
+                <Paper elevation={6} key={task.id} sx={{display:'flex',flexDirection:'column'}}>
                     <Typography padding={2} variant='p' sx={{ textAlign: 'center' }}>
                         Task: {task.tarea}
                     </Typography>
-                    <Button onClick={() => handleMoveToComplete(task.id)}>Add to complete</Button>
+                    <Button onClick={() => handleMoveToComplete(task.id,2)}>Add to complete</Button>
                 </Paper>
             ))}
 

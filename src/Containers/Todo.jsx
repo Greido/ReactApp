@@ -4,6 +4,7 @@ import { Paper, Typography,Grid, Button } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateTaskList } from '../store/features/taskReducer';
 import PendingTask from '../components/taskStatus/PendingTask';
+import CompleteTask from '../components/taskStatus/CompleteTask';
 
 function Todo() {
 
@@ -56,7 +57,7 @@ function Todo() {
 
                             
                             <Button
-                            onClick={()=>dispatch(updateTaskList(task.id,2))}
+                            onClick={()=>dispatch(updateTaskList(task.id,1))}
                             >
                                 Add to complete
                             </Button>
@@ -66,9 +67,12 @@ function Todo() {
 
                 
             </Grid>
+            <PendingTask/>
+            <CompleteTask/>
+
         </Grid>
 
-            <PendingTask/>
+
         </>
     )
 }
