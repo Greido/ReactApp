@@ -3,14 +3,13 @@ import { Container,Box,Grid,Paper, Typography, FormGroup,TextField,Button,FormCo
 import { useState } from 'react'
 import Todo from '../Containers/Todo'
 import { useDispatch } from 'react-redux'
-import { addTask } from '../store/actions/taskActions'
+import { addTask } from '../store/actions/taskActions';
 
 
 
 function FormTask() {
 
     const [task,setTask]=useState('')
-
     const dispatch = useDispatch()
 
     function handleSubmit(event){
@@ -20,11 +19,12 @@ function FormTask() {
         const nuevaTarea = {
             id:Date.now(),
             tarea:task,
-            completado:false   
-
+            completado:0,
         }
 
+        //Llamo a la accion addTask
         dispatch(addTask(nuevaTarea))
+        //Limpiar el campo de entrada
         setTask('');
     }
 
@@ -49,7 +49,7 @@ return (
                 sx={{background:'#984063',marginTop:2}} 
                 onClick={handleSubmit}
                 >
-                    Add Task
+                    Add Task 
                 </Button>
                 </Box>
 
